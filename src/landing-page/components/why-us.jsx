@@ -1,35 +1,41 @@
-import React from 'react';
-import EasyToUse from '../../assets/circle-nodes-solid.svg';
-import AwesomeDesign from '../../assets/laptop-file-solid.svg';
-import EasyToCustomize from '../../assets/sailboat-solid.svg';
-import AnyTimeSupport from '../../assets/wand-magic-sparkles-solid.svg';
+import React from "react";
+import EasyToUse from "../../assets/circle-nodes-solid.svg";
+import AwesomeDesign from "../../assets/laptop-file-solid.svg";
+import EasyToCustomize from "../../assets/sailboat-solid.svg";
+import AnyTimeSupport from "../../assets/wand-magic-sparkles-solid.svg";
 
 const features = [
   {
-    icon: <img src={EasyToUse} alt="Easy To Use" className='w-1/2' />,
-    title: 'Easy To Use',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: <img src={EasyToUse} alt="Easy To Use" className="w-1/2" />,
+    title: "Easy To Use",
+    description:
+      "Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.",
   },
   {
-    icon: <img src={AwesomeDesign} alt="Awesome Design"   className='w-1/2' />,
-    title: 'Awesome Design',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: <img src={AwesomeDesign} alt="Awesome Design" className="w-1/2" />,
+    title: "Awesome Design",
+    description:
+      "Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.",
   },
   {
-    icon: <img src={EasyToCustomize} alt="Easy To Customize"   className='w-1/2' />,
-    title: 'Easy To Customize',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: (
+      <img src={EasyToCustomize} alt="Easy To Customize" className="w-1/2" />
+    ),
+    title: "Easy To Customize",
+    description:
+      "Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.",
   },
   {
-    icon: <img src={AnyTimeSupport} alt="Any Time Support"  className='w-1/2'   />,
-    title: 'Any Time Support',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum t...',
+    icon: <img src={AnyTimeSupport} alt="Any Time Support" className="w-1/2" />,
+    title: "Any Time Support",
+    description:
+      "Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum t...",
   },
 ];
 
 const Whychooseus = () => {
   return (
-    <section id="about" className="py-20 dark:bg-dark lg:pt-[120px]">
+    <section id="about" className="py-24 dark:bg-dark lg:pt-[120px]">
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

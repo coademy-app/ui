@@ -1,53 +1,108 @@
-import React from 'react';
-import DrawerDialog from './drawer-dialog';
-import { Button } from '@/components/ui/button';
-
-const content = {
-  title: "Simple, powerful ways to increase website users",
-  description: `Split is a new, revolutionary & cost-effective way to grow your website's traffic.
-                It's a super-simple, one-time fee that will make your site rank higher on Google and bring in more visitors.
-                We're so confident, we offer a 100% money back guarantee.`,
-  buttonText: "Learn More",
-  imageAlt: "chart",
-  imageSrc: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-};
+import { useState, useEffect } from "react";
+import DrawerDialog from "./drawer-dialog";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import StarRating from "@/components/ui/star-rating";
 
 const WebDevCourse = () => {
+  const [startDate, setStartDate] = useState(
+    new Date(new Date().setDate(new Date().getDate() + 9)),
+  ); // Initialize to 9 days from now
+  const [remainingTime, setRemainingTime] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      const distance = startDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setRemainingTime({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [startDate]);
+
+  const handleDateChange = (e) => {
+    setStartDate(new Date(e.target.value));
+  };
+
   return (
     <>
-      <section id="webdev" className="py-16 lg:py-20 overflow-hidden relative">
-        <div className="max-w-screen-xl mx-auto px-6 md:px-8 ">
-          <div className="flex flex-col-reverse gap-x-12 justify-between md:flex-row md:items-center">
-            <div className="flex-none max-w-xl mt-12 space-y-3 md:mt-0">
-              <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                {content.title}
-              </h2>
-              <p className="text-gray-600">
-                {content.description}
-              </p>
-              <div className="pt-1">
-                <DrawerDialog triggerButton={<Button variant="default" size="sm">{content.buttonText}</Button>} />
-              </div>
-            </div>
-            <div className="flex-none w-full md:max-w-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 z-10"></div>
+      <section id="webdev" className="py-24 lg:py-20 overflow-hidden relative">
+        <div className="max-w-screen-xl mx-auto px-6 md:px-8">
+          <div className="flex flex-col md:flex-row gap-8 bg-gray-900 p-5 rounded-lg text-white">
+            <div className="w-full md:w-1/2">
               <img
-                alt={content.imageAlt}
-                src={content.imageSrc}
-                width={632}
-                height={285}
-                decoding="async"
-                data-nimg={1}
-                className="w-full shadow-lg rounded-lg border transform hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                style={{ color: "transparent" }}
+                src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="image of web development course"
+                className="w-full object-cover rounded-lg"
               />
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col gap-10 md:p-10 justify-between">
+              <div className="flex flex-col gap-3">
+                <div className="flex md:items-center justify-between md:flex-row flex-col">
+                  <h1 className="text-3xl tracking-tighter font-bold">
+                    Web Development Course
+                  </h1>
+                  <StarRating rating={5} />
+                </div>
+                <div>
+                  <p className="text-sm tracking-tighter">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi accusamus non aspernatur vel repellat ullam, dolorem
+                    incidunt, totam at maxime sapiente error minus numquam
+                    repellendus optio ea quisquam. Blanditiis, sapiente.
+                  </p>
+                  <div className="mt-4 text-base">
+                    Next course starts in{" "}
+                    <span className="font-bold tracking-tighter">
+                      {remainingTime.days} days {remainingTime.hours} :{" "}
+                      {remainingTime.minutes} : {remainingTime.seconds}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between gap-3 flex-col md:flex-row md:items-center mt-auto">
+                <div className="flex space-x-2">
+                  <Badge className="bg-white text-black hover:bg-gray-200">
+                    Web
+                  </Badge>
+                  <Badge className="bg-white text-black hover:bg-gray-200">
+                    MERN
+                  </Badge>
+                  <Badge className="bg-white text-black hover:bg-gray-200">
+                    Development
+                  </Badge>
+                </div>
+                <DrawerDialog
+                  triggerButton={
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="bg-white text-black hover:bg-gray-200"
+                    >
+                      Learn More
+                    </Button>
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
     </>
   );
-}
+};
 
 export default WebDevCourse;
