@@ -1,13 +1,16 @@
 import React from "react";
 import PlacementPartners from "./placement-partners";
-import HeroImage from "../../assets/images/hero-image.webp"
+import HeroImage from "../../assets/images/hero-image.webp";
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-white mt-24  md:py-16 py-16  overflow-hidden">
+    <section
+      id="home"
+      className="relative bg-white mt-24  md:py-16 py-16  overflow-hidden"
+    >
       <div className="max-w-screen-xl mx-auto px-6 md:px-8  ">
         <div className="md:flex items-center justify-between">
           <div className="md:w-1/2 md:pr-12 lg:pr-24">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+            <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
               Helping Startups Grow <br className="hidden lg:inline" />
               and Succeed
             </h1>
@@ -41,19 +44,17 @@ const Hero = () => {
                 </svg>
               </a>
             </div>
-            <p className="text-sm text-gray-500">
-              Over 200 successful deals
-            </p>
+            <p className="text-sm text-gray-500">Over 200 successful deals</p>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
-  <img
-    src={HeroImage}
-    className="rounded-lg shadow-lg"
-    alt="Hero Image"
-    width="100%"
-    height="auto"
-  />
-</div>
+            <img
+              src={HeroImage}
+              className="rounded-lg shadow-lg"
+              alt="Hero Image"
+              width="100%"
+              height="auto"
+            />
+          </div>
         </div>
       </div>
       <PlacementPartners />
