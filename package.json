@@ -1,6 +1,7 @@
 {
   "name": "ui",
   "private": true,
+  "homepage": "https://dev.coademy.in/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
