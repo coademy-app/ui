@@ -3,11 +3,24 @@ import DrawerDialog from './drawer-dialog';
 import { Button } from '@/components/ui/button';
 
 const content = {
-  title: "Simple, powerful ways to increase website users",
-  description: `Split is a new, revolutionary & cost-effective way to grow your website's traffic.
-                It's a super-simple, one-time fee that will make your site rank higher on Google and bring in more visitors.
-                We're so confident, we offer a 100% money back guarantee.`,
-  buttonText: "Learn More",
+  title: "Web Development Course",
+  description: `
+   <p><strong>Course Duration: 7 months</strong></p>
+  <p><strong>Sessions Duration: 200+ hrs</strong></p>
+  <p>Features:</p>
+  <ul>
+    <li>Weekly Assignments/Quizzes: Regular assessments to track your progress.</li>
+    <li>1-1 Counselling: Personalized guidance to help you excel.</li>
+    <li>Workshops: Hands-on learning sessions to reinforce concepts.</li>
+    <li>Doubt Sessions: Clear your queries with dedicated doubt-solving classes.</li>
+    <li>Capstone Project: Apply your learning in a comprehensive final project.</li>
+    <li>Career Guidance: Expert advice to shape your career path.</li>
+    <li>Placement Opportunities: Get assistance with internship opportunities.</li>
+    <li>Price: INR 18,900</li>
+    <li>No Cost EMI Option Available: INR 2,700 per month</li>
+  </ul>
+  `,
+  buttonText: "View Details",
   imageAlt: "chart",
   imageSrc: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 };
@@ -22,9 +35,11 @@ const WebDevCourse = () => {
               <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                 {content.title}
               </h2>
-              <p className="text-gray-600">
-                {content.description}
-              </p>
+              {/* <p className="text-gray-600"> */}
+             
+                {/* {content.description}
+              </p> */}
+              <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: content.description }}></div>
               <div className="pt-1">
                 <DrawerDialog triggerButton={<Button variant="default" size="sm">{content.buttonText}</Button>} />
               </div>
