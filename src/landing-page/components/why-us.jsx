@@ -6,24 +6,24 @@ import AnyTimeSupport from '../../assets/wand-magic-sparkles-solid.svg';
 
 const features = [
   {
-    icon: <img src={EasyToUse} alt="Easy To Use" className='w-1/2' />,
-    title: 'Easy To Use',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: <img src={EasyToUse} alt="Live Lectures" className='w-1/2' />,
+    title: 'Live Lectures',
+    description: ' Engage with experts in real-time and get instant feedback to enhance your learning experience.',
   },
   {
-    icon: <img src={AwesomeDesign} alt="Awesome Design"   className='w-1/2' />,
-    title: 'Awesome Design',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: <img src={AwesomeDesign} alt="Internship Opportunities"   className='w-1/2' />,
+    title: 'Internship Opportunities',
+    description: 'Gain hands-on experience and industry connections to boost your career prospects.',
   },
   {
-    icon: <img src={EasyToCustomize} alt="Easy To Customize"   className='w-1/2' />,
-    title: 'Easy To Customize',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.',
+    icon: <img src={EasyToCustomize} alt="Cost-Effective Courses"   className='w-1/2' />,
+    title: 'Cost-Effective Courses',
+    description: 'Access high-quality education at a fraction of the cost, providing exceptional value for your investment.',
   },
   {
     icon: <img src={AnyTimeSupport} alt="Any Time Support"  className='w-1/2'   />,
-    title: 'Any Time Support',
-    description: 'Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum t...',
+    title: 'Workshops',
+    description: 'Participate in practical workshops designed to refine your resume, sharpen your interview skills, and prepare you for the job market.',
   },
 ];
 
@@ -35,15 +35,15 @@ const Whychooseus = () => {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <span className="mb-2 block text-lg font-semibold text-primary">
-                Why Choose Coademy?
+                Why Choose Us?
               </span>
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
                 Our Awesome Features
               </h2>
-              <p className="dark:text-dark-6 text-base text-body-color">
+              {/* <p className="dark:text-dark-6 text-base text-body-color">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

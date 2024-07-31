@@ -1,23 +1,23 @@
 import React from 'react';
 const services = [
   {
-    title: 'Courses',
-    description: 'Explore our comprehensive range of courses designed to enhance your skills and knowledge.',
+    title: 'Education to Students',
+    description: 'Comprehensive web development courses designed to equip students with industry-relevant skills.',
     icon: '📘',
   },
   {
-    title: 'Mentors',
-    description: 'Connect with experienced mentors who can guide you through your learning journey.',
+    title: 'Web-App Services',
+    description: ' Custom web application development to transform your business ideas into reality.',
     icon: '👩‍🏫',
   },
   {
-    title: 'Placement Preparation',
-    description: 'Prepare effectively for job placements with our expertly designed preparation programs.',
+    title: 'Hire Developers',
+    description: 'Connect with top-tier developers to strengthen your team and achieve your project goals.',
     icon: '🎓',
   },
   {
-    title: 'Online Platform',
-    description: 'Access our cutting-edge online platform that facilitates interactive learning experiences.',
+    title: 'Collaboration with Educational Institutes',
+    description: 'Partner with us to enhance your curriculum and provide students with real-world skills.',
     icon: '💻',
   },
 ];
